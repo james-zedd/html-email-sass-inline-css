@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
+    </style>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>{{ email_title }}</title>
+  </head>
+  <body>
+    <table id="bodyTable">
+      <tbody>
+        <tr class="header">
+          <td>
+            <p>Canadian Beverage Supply <span>cdnbev.com</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table class="email__body">
+              <tbody>
+                <tr class="banner-logo">
+                  <td class="banner__color-fill">
+                    <img
+                      src="img/logo.png"
+                      alt="Canadian Beverage Supply Logo"
+                      class="imageFix"
+                    />
+                  </td>
+                </tr>
+                <tr class="banner-img">
+                  <td>
+                    <img
+                      src="img/banner.jpg"
+                      alt="Canadian Beverage Supply"
+                      class="imageFix"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="email__content">
+              <tbody>
+                <tr class="ty">
+                  <td colspan="2">
+                    <h2>Thanks {{ company.name }}</h2>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td class="data__block">
+                    <p class="title">Order Date</p>
+                    <p>{{ order.created_at | date: "%B %d, %Y" }}</p>
+                    <p class="title">Order Number</p>
+                    <p>{{ order.order_number }}</p>
+                  </td>
+                  <td class="data__block">
+                    <p class="title">SHIPPING Address</p>
+                    <p>{{ order.shipping_address.name }}</p>
+                    <p>{{ order.shipping_address.address1 }}</p>
+                    <p>{{ order.shipping_address.address2 }}</p>
+                    <p>
+                      {{ order.shipping_address.city }},
+                      {{ order.shipping_address.province_code }}
+                      {{ order.shipping_address.zip }}
+                    </p>
+                    <p>{{ order.shipping_address.country_code }}</p>
+                  </td>
+                </tr>
+                <tr class="promotions">
+                  <td colspan="2">
+                    <p>Stay updated by following</p>
+                    <p class="link">
+                      <a
+                        href="https://www.instagram.com/canadianbeveragesupply/"
+                        >@CanadianBeverageSupply</a
+                      >
+                    </p>
+                    <p>Join our growing</p>
+                    <p class="link">
+                      <a
+                        href="https://www.instagram.com/explore/tags/dispenseexperts/"
+                        >#DispenseExperts</a
+                      >
+                      community
+                    </p>
+                  </td>
+                </tr>
+                <tr class="phone">
+                  <td colspan="2">
+                    <img
+                      src="img/phone.png"
+                      alt="Canadian Beverage Supply"
+                      class="imageFix"
+                    />
+                  </td>
+                </tr>
+                <tr class="footer">
+                  <td colspan="2">
+                    <p>{{ shop.name }}</p>
+                    <p class="address">
+                      {{ shop.address.street }}, {{ shop.address.city }}
+                      {{ shop.address.province_code }}, {{ shop.address.zip }}
+                    </p>
+                    <p>{{ shop.address.country_upper }}</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
