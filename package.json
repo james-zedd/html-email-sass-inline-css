@@ -11,12 +11,13 @@
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
-    "gulp-inline-css": "^3.3.1",
+    "gulp-inline-css": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.1"
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "netmask": ">=2.0.1"
+    "netmask": ">=2.0.1",
+    "yargs-parser": "^20.2.7"
   }
 }
