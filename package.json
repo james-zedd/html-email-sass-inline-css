@@ -16,7 +16,7 @@
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "netmask": ">=2.0.1",
     "yargs-parser": "^20.2.7"
   }
